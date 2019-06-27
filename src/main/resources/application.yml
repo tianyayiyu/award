@@ -20,7 +20,6 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: -1
     filters: stat,wall,slf4j,config
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMil=3000
-    useGlobalDataSourceStat: true
   servlet:
     multipart:
       max-file-size: 10MB
@@ -32,10 +31,11 @@ server:
 
 mybatis:
   type-aliases-package: com.zyl.award.*
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:mapperbase/*.xml
 mapper:
   mappers:
-    - com.zyl.award.commons.mapper.MyMapper
+    - tk.mybatis.mapper.common.Mapper
+    - com.zyl.award.commons.mapperbase.MyMapper
   notEmpty: true
   identity: MYSQL
 
@@ -44,4 +44,13 @@ pagehelper:
   reasonable: true    #pageNo<=0时默认为1
   supportMethodsArguments: true
   params: count=countSql
+
+web:
+  upload:
+    file:
+      path: D:/tmp/file
+    pic:
+      path: D:/tmp/pic
+    excel:
+      path: D:/tmp/excel
 

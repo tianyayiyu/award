@@ -38,16 +38,16 @@ public class FileServiceImpl implements FileService {
     @Value("${web.upload.excel.path}")
     private String excelPath;
 
-    @Value("${web.upload.pic.thumbWidth}")
+    @Value("${web.upload.pic.thumbWidth:100}")
     private int picThumbWidth;
 
-    @Value("${web.upload.pic.thumbHeight}")
+    @Value("${web.upload.pic.thumbHeight:100}")
     private int picThumbHeight;
 
-    @Value("${web.upload.pic.quality}")
+    @Value("${web.upload.pic.quality:0.5}")
     private float picQuality = 0.5f;
 
-    @Value("${web.upload.pic.scale}")
+    @Value("${web.upload.pic.scale:0.25}")
     private float picScale = 0.25f;
 
     @Override
@@ -55,10 +55,10 @@ public class FileServiceImpl implements FileService {
         try {
             return fileUtils.copyFile(file,destPath);
         }catch (FileNotFoundException e){
-            log.error("上传文件异常:{}",e);
+            log.error("上传文件异常:",e);
             throw new BusinessException("文件未找到或拒绝访问目标文件夹");
         }catch (IOException e) {
-            log.error("上传文件异常:{}",e);
+            log.error("上传文件异常:",e);
         }
         return "";
     }
@@ -70,7 +70,7 @@ public class FileServiceImpl implements FileService {
                 return fileUtils.copyFile(file,filePath);
             } catch (IOException e) {
                 e.printStackTrace();
-                log.error("图片文件上传异常:{}",e);
+                log.error("图片文件上传异常:",e);
             }
         }else{
             throw new BusinessException(ResultCode.FILE_UPLOAD_PATH_NOT_SETTING);
@@ -116,7 +116,7 @@ public class FileServiceImpl implements FileService {
             return thumbPath.substring(path.length()+1);
         } catch (IOException e) {
             e.printStackTrace();
-            log.error("图片文件上传异常:{}",e);
+            log.error("图片文件上传异常:",e);
         }
         return "";
     }
@@ -134,7 +134,7 @@ public class FileServiceImpl implements FileService {
             return fileUtils.copyFile(file,path);
         } catch (IOException e) {
             e.printStackTrace();
-            log.error("图片文件上传异常:{}",e);
+            log.error("图片文件上传异常:",e);
         }
         return "";
     }

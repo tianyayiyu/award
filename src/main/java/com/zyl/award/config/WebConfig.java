@@ -1,0 +1,41 @@
+package com.zyl.award.config;
+
+import com.zyl.award.interceptor.ResponseResultInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.*;
+
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+    @Autowired
+    ResponseResultInterceptor responseResultInterceptor;
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        String url = "/**";
+        registry.addInterceptor(responseResultInterceptor).addPathPatterns(url);
+    }
+
+    @Bean
+    public ResponseResultInterceptor responseResultInterceptor(){
+        return new ResponseResultInterceptor();
+    }
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/api/**")
+                .allowedOrigins("*")
+                .allowCredentials(true)
+                .allowedMethods("GET", "POST", "DELETE", "PUT","PATCH")
+                .maxAge(3600);
+    }
+}

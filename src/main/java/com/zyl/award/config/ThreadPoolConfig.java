@@ -9,7 +9,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 
 @Data
-@ConfigurationProperties(prefix = "threadPool")
+@ConfigurationProperties(prefix = "thread-pool")
 public class ThreadPoolConfig {
     private int corePoolSize = 10;
     private int maximumPoolSize = 40;

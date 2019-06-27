@@ -1,6 +1,6 @@
 package com.zyl.award.commons.service.impl;
 
-import com.zyl.award.commons.mapper.MyMapper;
+import com.zyl.award.commons.mapperbase.MyMapper;
 import com.zyl.award.commons.model.po.PO;
 import com.zyl.award.commons.model.qo.PageQO;
 import com.zyl.award.commons.model.vo.PageVO;

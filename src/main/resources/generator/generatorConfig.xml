@@ -11,7 +11,7 @@
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
             <!--可以定义自己的通用mapper接口-->
-            <property name="mappers" value="com.zyl.award.commons.mapper.MyMapper"/>
+            <property name="mappers" value="com.zyl.award.commons.mapperbase.MyMapper"/>
             <!--是否区分大小写-->
             <property name="caseSensitive" value="false"/>
             <!--是否强制生成注解-->
@@ -32,7 +32,7 @@
                             targetProject="src/test/java">
             <property name="rootClass" value="com.zyl.award.commons.model.po.BasePO" />
         </javaModelGenerator>
-        <!--mapper  XML-->
+        <!--mapperbase  XML-->
         <sqlMapGenerator targetPackage="mapper"
                          targetProject="src/test/resources"/>
         <!--JAVA 接口类-->

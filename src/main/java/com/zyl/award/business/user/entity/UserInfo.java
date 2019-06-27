@@ -1,14 +1,12 @@
 package com.zyl.award.business.user.entity;
 
-import com.zyl.award.commons.mapper.SimpleGenId;
+import com.zyl.award.commons.mapperbase.SimpleGenId;
 import com.zyl.award.commons.model.po.BasePO;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
