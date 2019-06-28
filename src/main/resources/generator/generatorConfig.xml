@@ -30,7 +30,7 @@
         <!--MyBatis 生成器只需要生成 Model-->
         <javaModelGenerator targetPackage="com.zyl.award.model"
                             targetProject="src/test/java">
-            <property name="rootClass" value="com.zyl.award.commons.model.po.BasePO" />
+            <property name="rootClass" value="com.zyl.award.commons.model.po.BasePO"/>
         </javaModelGenerator>
         <!--mapperbase  XML-->
         <sqlMapGenerator targetPackage="mapper"
@@ -40,8 +40,76 @@
                              targetProject="src/test/java"
                              type="XMLMAPPER"/>
 
+        <table tableName="award_base_target">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="award_base_type">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="award_expert">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="award_meeting">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="award_obj">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="base_expert">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="base_person">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="base_project">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="login_record">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="meeting_round">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="meeting_round_vote_obj">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="meeting_round_obj">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+
+        <table tableName="sys_dept">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="sys_dict">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="sys_dict_catalog">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="sys_file">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
         <table tableName="sys_log">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
+        <table tableName="sys_menu">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="sys_role">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="sys_role_menu">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="sys_user">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="sys_user_role">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="target_fraction">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+
     </context>
 </generatorConfiguration>

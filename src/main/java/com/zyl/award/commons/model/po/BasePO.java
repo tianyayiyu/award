@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Data
-public abstract class BasePO<Integer> implements PO<Integer> {
+public abstract class BasePO<PK> implements PO<PK> {
 
 
     @ApiModelProperty(value = "创建时间",hidden = true)
