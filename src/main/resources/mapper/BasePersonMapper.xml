@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyl.award.mapper.BasePersonMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.model.BasePerson">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="person_name" jdbcType="VARCHAR" property="personName" />
+    <result column="award_year" jdbcType="SMALLINT" property="awardYear" />
+    <result column="cat_id" jdbcType="INTEGER" property="catId" />
+    <result column="cat_name" jdbcType="VARCHAR" property="catName" />
+    <result column="person_code" jdbcType="INTEGER" property="personCode" />
+    <result column="person_file_num" jdbcType="SMALLINT" property="personFileNum" />
+    <result column="award_type_id" jdbcType="INTEGER" property="awardTypeId" />
+    <result column="award_type_name" jdbcType="VARCHAR" property="awardTypeName" />
+    <result column="first_prize_id" jdbcType="INTEGER" property="firstPrizeId" />
+    <result column="first_prize_name" jdbcType="VARCHAR" property="firstPrizeName" />
+    <result column="first_result" jdbcType="TINYINT" property="firstResult" />
+    <result column="final_prize_id" jdbcType="INTEGER" property="finalPrizeId" />
+    <result column="final_prize_name" jdbcType="VARCHAR" property="finalPrizeName" />
+    <result column="final_result" jdbcType="TINYINT" property="finalResult" />
+    <result column="k_type" jdbcType="SMALLINT" property="kType" />
+    <result column="k_sex" jdbcType="VARCHAR" property="kSex" />
+    <result column="k_age" jdbcType="INTEGER" property="kAge" />
+    <result column="k_dept" jdbcType="VARCHAR" property="kDept" />
+    <result column="k_education" jdbcType="VARCHAR" property="kEducation" />
+    <result column="k_title" jdbcType="VARCHAR" property="kTitle" />
+    <result column="k_duties" jdbcType="VARCHAR" property="kDuties" />
+    <result column="k_winning_country_number" jdbcType="INTEGER" property="kWinningCountryNumber" />
+    <result column="k_winning_country_level" jdbcType="VARCHAR" property="kWinningCountryLevel" />
+    <result column="k_winning_country_ranking" jdbcType="INTEGER" property="kWinningCountryRanking" />
+    <result column="k_winning_province_number" jdbcType="INTEGER" property="kWinningProvinceNumber" />
+    <result column="k_winning_province_level" jdbcType="VARCHAR" property="kWinningProvinceLevel" />
+    <result column="k_winning_province_ranking" jdbcType="INTEGER" property="kWinningProvinceRanking" />
+    <result column="k_winning_bureau_number" jdbcType="INTEGER" property="kWinningBureauNumber" />
+    <result column="k_winning_bureau_level" jdbcType="VARCHAR" property="kWinningBureauLevel" />
+    <result column="k_winning_bureau_ranking" jdbcType="INTEGER" property="kWinningBureauRanking" />
+    <result column="k_association" jdbcType="INTEGER" property="kAssociation" />
+    <result column="k_patent_invention_number" jdbcType="INTEGER" property="kPatentInventionNumber" />
+    <result column="k_patent_invention_level" jdbcType="VARCHAR" property="kPatentInventionLevel" />
+    <result column="k_patent_invention_ranking" jdbcType="INTEGER" property="kPatentInventionRanking" />
+    <result column="k_patent_practical_number" jdbcType="INTEGER" property="kPatentPracticalNumber" />
+    <result column="k_patent_practical_level" jdbcType="VARCHAR" property="kPatentPracticalLevel" />
+    <result column="k_patent_practical_ranking" jdbcType="INTEGER" property="kPatentPracticalRanking" />
+    <result column="k_copyright_number" jdbcType="INTEGER" property="kCopyrightNumber" />
+    <result column="k_sci" jdbcType="INTEGER" property="kSci" />
+    <result column="k_ei" jdbcType="INTEGER" property="kEi" />
+    <result column="k_kernel" jdbcType="INTEGER" property="kKernel" />
+    <result column="k_work" jdbcType="INTEGER" property="kWork" />
+    <result column="k_projectname" jdbcType="VARCHAR" property="kProjectname" />
+    <result column="k_responsibility" jdbcType="VARCHAR" property="kResponsibility" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="person_info" jdbcType="LONGVARCHAR" property="personInfo" />
+    <result column="k_remarks" jdbcType="LONGVARCHAR" property="kRemarks" />
+  </resultMap>
+</mapper>

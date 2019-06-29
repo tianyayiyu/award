@@ -17,9 +17,9 @@ public class SwaggerUiConfig {
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .groupName("测试环境")
+//                .groupName("中石油评奖")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example"))
+                .apis(RequestHandlerSelectors.basePackage("com.zyl"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -30,7 +30,7 @@ public class SwaggerUiConfig {
 //                .apiInfo(apiInfo())
 //                .groupName("人员管理")
 //                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.zyl.award.business.user"))
+//                .apis(RequestHandlerSelectors.basePackage("com.zyl.award.business.demo"))
 //                .paths(PathSelectors.any())
 //                .build();
 //    }
@@ -38,9 +38,9 @@ public class SwaggerUiConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("测试API环境搭建")
-                .description("为了平常做一些测试联系用处")
-                .termsOfServiceUrl("http://www.test.com/")
+                .title("中石油评奖系统")
+                .description("中石油科技奖励评审")
+                .termsOfServiceUrl("http://188.131.135.224/")
                 .contact("shj_no_bug@163.com")
                 .version("1.0")
                 .build();

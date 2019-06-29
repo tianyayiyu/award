@@ -49,7 +49,7 @@ layui.define(['laytpl', 'layer'], function(exports){
     });
     
     //跳转到登入页
-    location.hash = '/user/login'; 
+    location.hash = '/demo/login'; 
   };
   
   //Ajax请求
@@ -156,14 +156,18 @@ layui.define(['laytpl', 'layer'], function(exports){
   
   //异常提示
   view.error = function(content, options){
-    return view.popup($.extend({
-      content: content
-      ,maxWidth: 300
-      //,shade: 0.01
-      ,offset: 't'
-      ,anim: 6
-      ,id: 'LAY_adminError'
-    }, options))
+    // return view.popup($.extend({
+    //   content: content
+    //   ,maxWidth: 300
+    //   //,shade: 0.01
+    //   ,offset: 't'
+    //   ,anim: 6
+    //   ,id: 'LAY_adminError'
+    // }, options))
+    return layer.alert(content, {
+      offset: 'auto',
+      icon: 2,
+    }, options);
   };
   
   

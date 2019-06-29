@@ -54,3 +54,21 @@ web:
     excel:
       path: D:/tmp/excel
 
+project:
+  config:
+    anonymous-api:
+      - /swagger-resources/**
+      - /api/back/sysuser/login
+      - /api/back/sysuser/register
+      - /webjars/**
+      - /v2/**
+      - /swagger-ui.html/**
+      - /static/**
+      - /css/**
+      - /index.html/**
+      - /fonts/**
+      - /img/**
+      - /js/**
+      - /wx/**
+      - /error
+

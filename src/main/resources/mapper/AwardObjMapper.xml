@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyl.award.mapper.AwardObjMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.model.AwardObj">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="meeting_id" jdbcType="INTEGER" property="meetingId" />
+    <result column="meeting_name" jdbcType="VARCHAR" property="meetingName" />
+    <result column="obj_id" jdbcType="INTEGER" property="objId" />
+    <result column="obj_name" jdbcType="VARCHAR" property="objName" />
+    <result column="obj_code" jdbcType="VARCHAR" property="objCode" />
+    <result column="order" jdbcType="SMALLINT" property="order" />
+    <result column="award_type_id" jdbcType="INTEGER" property="awardTypeId" />
+    <result column="award_type_name" jdbcType="VARCHAR" property="awardTypeName" />
+    <result column="award_year" jdbcType="SMALLINT" property="awardYear" />
+    <result column="award_type_type" jdbcType="SMALLINT" property="awardTypeType" />
+    <result column="award_score" jdbcType="DECIMAL" property="awardScore" />
+    <result column="agree_num" jdbcType="SMALLINT" property="agreeNum" />
+    <result column="disagree_num" jdbcType="SMALLINT" property="disagreeNum" />
+    <result column="back_num" jdbcType="SMALLINT" property="backNum" />
+    <result column="prize_id" jdbcType="TINYINT" property="prizeId" />
+    <result column="prize_name" jdbcType="VARCHAR" property="prizeName" />
+    <result column="round_index" jdbcType="SMALLINT" property="roundIndex" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

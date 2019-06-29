@@ -55,7 +55,8 @@ public enum ResultCode {
 	/* 权限错误：70001-79999 */
 	PERMISSION_NO_ACCESS(70001, "无访问权限"),
 	RESOURCE_EXISTED(70002, "资源已存在"),
-	RESOURCE_NOT_EXISTED(70003, "资源不存在");
+	RESOURCE_NOT_EXISTED(70003, "资源不存在"),
+	TOKEN_ERROR(70004, "TOKEN失效");
 
 	private Integer code;
 

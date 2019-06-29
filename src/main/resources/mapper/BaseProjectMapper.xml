@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyl.award.mapper.BaseProjectMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.model.BaseProject">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="project_name" jdbcType="VARCHAR" property="projectName" />
+    <result column="award_year" jdbcType="INTEGER" property="awardYear" />
+    <result column="cat_id" jdbcType="INTEGER" property="catId" />
+    <result column="cat_name" jdbcType="VARCHAR" property="catName" />
+    <result column="award_type_id" jdbcType="INTEGER" property="awardTypeId" />
+    <result column="award_type_name" jdbcType="VARCHAR" property="awardTypeName" />
+    <result column="project_code" jdbcType="VARCHAR" property="projectCode" />
+    <result column="project_file_num" jdbcType="INTEGER" property="projectFileNum" />
+    <result column="recommend_prize_id" jdbcType="INTEGER" property="recommendPrizeId" />
+    <result column="recommend_prize_name" jdbcType="VARCHAR" property="recommendPrizeName" />
+    <result column="recommend_agency_name" jdbcType="VARCHAR" property="recommendAgencyName" />
+    <result column="main_agency_name" jdbcType="VARCHAR" property="mainAgencyName" />
+    <result column="main_user_name" jdbcType="VARCHAR" property="mainUserName" />
+    <result column="result_type_id" jdbcType="INTEGER" property="resultTypeId" />
+    <result column="result_type_name" jdbcType="VARCHAR" property="resultTypeName" />
+    <result column="project_score" jdbcType="DECIMAL" property="projectScore" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="order" jdbcType="INTEGER" property="order" />
+    <result column="first_prize_id" jdbcType="INTEGER" property="firstPrizeId" />
+    <result column="first_prize_name" jdbcType="VARCHAR" property="firstPrizeName" />
+    <result column="first_prize_result" jdbcType="INTEGER" property="firstPrizeResult" />
+    <result column="final_prize_id" jdbcType="INTEGER" property="finalPrizeId" />
+    <result column="final_prize_name" jdbcType="VARCHAR" property="finalPrizeName" />
+    <result column="final_prize_result" jdbcType="INTEGER" property="finalPrizeResult" />
+    <result column="meeting_type" jdbcType="INTEGER" property="meetingType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="project_info" jdbcType="LONGVARCHAR" property="projectInfo" />
+  </resultMap>
+</mapper>

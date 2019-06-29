@@ -2,6 +2,7 @@
  
 layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
   exports('setter', {
+    host: 'http://127.0.0.1:8888/api/back',
     container: 'LAY_app' //容器ID
     ,base: layui.cache.base //记录layuiAdmin文件夹所在路径
     ,views: layui.cache.base + 'views/' //视图所在目录
@@ -10,24 +11,24 @@ layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
     ,pageTabs: false //是否开启页面选项卡功能。单页版不推荐开启
     
     ,name: 'layuiAdmin Pro'
-    ,tableName: 'layuiAdmin' //本地存储表名
+    ,tableName: 'localTable' //本地存储表名
     ,MOD_NAME: 'admin' //模块事件名
     
     ,debug: true //是否开启调试模式。如开启，接口异常时会抛出异常 URL 等信息
     
-    ,interceptor: false //是否开启未登入拦截
+    ,interceptor: true //是否开启未登入拦截
     
     //自定义请求字段
     ,request: {
-      tokenName: 'access_token' //自动携带 token 的字段名。可设置 false 不携带。
+      tokenName: 'token' //自动携带 token 的字段名。可设置 false 不携带。
     }
     
     //自定义响应字段
     ,response: {
       statusName: 'code' //数据状态的字段名称
       ,statusCode: {
-        ok: 0 //数据状态一切正常的状态码
-        ,logout: 1001 //登录状态失效的状态码
+        ok: 1 //数据状态一切正常的状态码
+        ,logout: 70004 //登录状态失效的状态码
       }
       ,msgName: 'msg' //状态信息的字段名称
       ,dataName: 'data' //数据详情的字段名称
@@ -36,8 +37,8 @@ layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
     //独立页面路由，可随意添加（无需写参数）
     ,indPage: [
       '/user/login' //登入页
-      ,'/user/reg' //注册页
-      ,'/user/forget' //找回密码
+      ,'/demo/reg' //注册页
+      ,'/demo/forget' //找回密码
       ,'/template/tips/test' //独立页的一个测试 demo
     ]
     
@@ -126,7 +127,7 @@ layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
       
       //初始的颜色索引，对应上面的配色方案数组索引
       //如果本地已经有主题色记录，则以本地记录为优先，除非请求本地数据（localStorage）
-      ,initColorIndex: 0
+      ,initColorIndex: 6
     }
   });
 });

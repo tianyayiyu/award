@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyl.award.mapper.MeetingRoundMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.model.MeetingRound">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="meeting_id" jdbcType="INTEGER" property="meetingId" />
+    <result column="meeting_name" jdbcType="VARCHAR" property="meetingName" />
+    <result column="award_year" jdbcType="SMALLINT" property="awardYear" />
+    <result column="round_index" jdbcType="SMALLINT" property="roundIndex" />
+    <result column="prize0_num" jdbcType="SMALLINT" property="prize0Num" />
+    <result column="prize1_num" jdbcType="SMALLINT" property="prize1Num" />
+    <result column="prize2_num" jdbcType="SMALLINT" property="prize2Num" />
+    <result column="prize3_num" jdbcType="SMALLINT" property="prize3Num" />
+    <result column="prize0_ret" jdbcType="SMALLINT" property="prize0Ret" />
+    <result column="prize1_ret" jdbcType="SMALLINT" property="prize1Ret" />
+    <result column="prize2_ret" jdbcType="SMALLINT" property="prize2Ret" />
+    <result column="prize3_ret" jdbcType="SMALLINT" property="prize3Ret" />
+    <result column="round_status" jdbcType="SMALLINT" property="roundStatus" />
+    <result column="round_status_name" jdbcType="VARCHAR" property="roundStatusName" />
+    <result column="target_ids" jdbcType="VARCHAR" property="targetIds" />
+    <result column="wipe_min_max" jdbcType="TINYINT" property="wipeMinMax" />
+    <result column="order" jdbcType="TINYINT" property="order" />
+    <result column="award_type_type" jdbcType="TINYINT" property="awardTypeType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

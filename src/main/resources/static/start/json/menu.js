@@ -255,15 +255,15 @@
     },{
       "name": "reg"
       ,"title": "注册"
-      ,"jump": "user/reg"
+      ,"jump": "demo/reg"
     },{
       "name": "login"
       ,"title": "登入"
-      ,"jump": "user/login"
+      ,"jump": "demo/login"
     },{
       "name": "forget"
       ,"title": "忘记密码"
-      ,"jump": "user/forget"
+      ,"jump": "demo/forget"
     },{
       "name": "404"
       ,"title": "404"
@@ -347,21 +347,21 @@
       }]
     }]
   }, {
-    "name": "user"
+    "name": "demo"
     ,"title": "用户"
-    ,"icon": "layui-icon-user"
+    ,"icon": "layui-icon-demo"
     ,"list": [{
-      "name": "user"
+      "name": "demo"
       ,"title": "网站用户"
-      ,"jump": "user/user/list"
+      ,"jump": "demo/demo/list"
     }, {
       "name": "administrators-list"
       ,"title": "后台管理员"
-      ,"jump": "user/administrators/list"
+      ,"jump": "demo/administrators/list"
     }, {
       "name": "administrators-rule"
       ,"title": "角色管理"
-      ,"jump": "user/administrators/role"
+      ,"jump": "demo/administrators/role"
     }]
   }, {
     "name": "set"
@@ -379,7 +379,7 @@
         ,"title": "邮件服务"
       }]
     },{
-      "name": "user"
+      "name": "demo"
       ,"title": "我的设置"
       ,"spread": true
       ,"list": [{

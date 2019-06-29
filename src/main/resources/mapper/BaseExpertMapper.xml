@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyl.award.mapper.BaseExpertMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.model.BaseExpert">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="expert_name" jdbcType="VARCHAR" property="expertName" />
+    <result column="expert_code" jdbcType="VARCHAR" property="expertCode" />
+    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+    <result column="award_type_id" jdbcType="INTEGER" property="awardTypeId" />
+    <result column="award_type_name" jdbcType="VARCHAR" property="awardTypeName" />
+    <result column="status" jdbcType="SMALLINT" property="status" />
+    <result column="order" jdbcType="SMALLINT" property="order" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

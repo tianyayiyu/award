@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyl.award.mapper.SysFileMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.model.SysFile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="fid" jdbcType="VARCHAR" property="fid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="p_title" jdbcType="VARCHAR" property="pTitle" />
+    <result column="class_type" jdbcType="VARCHAR" property="classType" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="pathid" jdbcType="VARCHAR" property="pathid" />
+    <result column="size" jdbcType="VARCHAR" property="size" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="p_shuiyin" jdbcType="VARCHAR" property="pShuiyin" />
+    <result column="p_picmin" jdbcType="VARCHAR" property="pPicmin" />
+    <result column="p_picmax" jdbcType="VARCHAR" property="pPicmax" />
+    <result column="p_cover" jdbcType="INTEGER" property="pCover" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

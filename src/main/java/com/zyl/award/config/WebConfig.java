@@ -1,5 +1,6 @@
 package com.zyl.award.config;
 
+import com.zyl.award.interceptor.AuthenticationInterceptor;
 import com.zyl.award.interceptor.ResponseResultInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -12,17 +13,25 @@ public class WebConfig implements WebMvcConfigurer {
     @Autowired
     ResponseResultInterceptor responseResultInterceptor;
 
+    @Autowired
+    AuthenticationInterceptor authenticationInterceptor;
+
+    @Autowired
+    ProjectConfig projectConfig;
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/static");
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static").setCachePeriod(0);
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-        registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         String url = "/**";
         registry.addInterceptor(responseResultInterceptor).addPathPatterns(url);
+        registry.addInterceptor(authenticationInterceptor).addPathPatterns(url).excludePathPatterns(projectConfig.getAnonymousApi());
     }
 
     @Bean

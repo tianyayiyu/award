@@ -49,19 +49,13 @@ public class LogAspect {
         }
 
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-//        User loginUser = LoginHelper.getLoginUserFromRequest(request);
 
-//        String ip = IpUtil.getRealIp(request);
         String ip = "127.0.0.1";
         String methodName = this.getMethodName(joinPoint);
         String params = this.getParamsJson(joinPoint);
-//        String requester = loginUser == null ? "unknown" : String.valueOf(loginUser.getId());
-        String requester = "user";
+        String requester = "demo";
 
-//        String callSource = request.getHeader(HeaderConstants.CALL_SOURCE);
-//        String appVersion = request.getHeader(HeaderConstants.APP_VERSION);
-//        String apiVersion = request.getHeader(HeaderConstants.API_VERSION);
-        String userAgent = request.getHeader("user-agent");
+        String userAgent = request.getHeader("demo-agent");
 
         log.info("Started request requester [{}] method [{}] params [{}] IP [{}]  userAgent [{}]", requester, methodName, params, ip, userAgent);
         long start = System.currentTimeMillis();

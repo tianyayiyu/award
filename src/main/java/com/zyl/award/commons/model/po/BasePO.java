@@ -5,12 +5,18 @@ import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
 @Data
-public abstract class BasePO<PK> implements PO<PK> {
+public abstract class BasePO<PK> implements PO<Integer> {
 
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(generator = "JDBC")
+    @ApiModelProperty(hidden = true)
+    private Integer id;
 
     @ApiModelProperty(value = "创建时间",hidden = true)
     @Column(name = "create_time")

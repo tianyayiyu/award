@@ -17,7 +17,7 @@ layui.define(['table', 'form'], function(exports){
 
   //用户管理
   table.render({
-    elem: '#LAY-user-manage'
+    elem: '#LAY-demo-manage'
     ,url: './json/useradmin/webuser.js' //模拟接口
     ,cols: [[
       {type: 'checkbox', fixed: 'left'}
@@ -38,7 +38,7 @@ layui.define(['table', 'form'], function(exports){
   });
   
   //监听工具条
-  table.on('tool(LAY-user-manage)', function(obj){
+  table.on('tool(LAY-demo-manage)', function(obj){
     var data = obj.data;
     if(obj.event === 'del'){
       layer.prompt({
@@ -56,18 +56,18 @@ layui.define(['table', 'form'], function(exports){
       admin.popup({
         title: '编辑用户'
         ,area: ['500px', '450px']
-        ,id: 'LAY-popup-user-add'
+        ,id: 'LAY-popup-demo-add'
         ,success: function(layero, index){
-          view(this.id).render('user/user/userform', data).done(function(){
+          view(this.id).render('demo/demo/userform', data).done(function(){
             form.render(null, 'layuiadmin-form-useradmin');
             
             //监听提交
-            form.on('submit(LAY-user-front-submit)', function(data){
+            form.on('submit(LAY-demo-front-submit)', function(data){
               var field = data.field; //获取提交的字段
 
               //提交 Ajax 成功后，关闭当前弹层并重载表格
               //$.ajax({});
-              layui.table.reload('LAY-user-manage'); //重载表格
+              layui.table.reload('LAY-demo-manage'); //重载表格
               layer.close(index); //执行关闭 
             });
           });
@@ -78,7 +78,7 @@ layui.define(['table', 'form'], function(exports){
 
   //管理员管理
   table.render({
-    elem: '#LAY-user-back-manage'
+    elem: '#LAY-demo-back-manage'
     ,url: './json/useradmin/mangadmin.js' //模拟接口
     ,cols: [[
       {type: 'checkbox', fixed: 'left'}
@@ -95,7 +95,7 @@ layui.define(['table', 'form'], function(exports){
   });
   
   //监听工具条
-  table.on('tool(LAY-user-back-manage)', function(obj){
+  table.on('tool(LAY-demo-back-manage)', function(obj){
     var data = obj.data;
     if(obj.event === 'del'){
       layer.prompt({
@@ -113,18 +113,18 @@ layui.define(['table', 'form'], function(exports){
       admin.popup({
         title: '编辑管理员'
         ,area: ['420px', '450px']
-        ,id: 'LAY-popup-user-add'
+        ,id: 'LAY-popup-demo-add'
         ,success: function(layero, index){
-          view(this.id).render('user/administrators/adminform', data).done(function(){
+          view(this.id).render('demo/administrators/adminform', data).done(function(){
             form.render(null, 'layuiadmin-form-admin');
             
             //监听提交
-            form.on('submit(LAY-user-back-submit)', function(data){
+            form.on('submit(LAY-demo-back-submit)', function(data){
               var field = data.field; //获取提交的字段
 
               //提交 Ajax 成功后，关闭当前弹层并重载表格
               //$.ajax({});
-              layui.table.reload('LAY-user-back-manage'); //重载表格
+              layui.table.reload('LAY-demo-back-manage'); //重载表格
               layer.close(index); //执行关闭 
             });
           });
@@ -135,7 +135,7 @@ layui.define(['table', 'form'], function(exports){
 
   //角色管理
   table.render({
-    elem: '#LAY-user-back-role'
+    elem: '#LAY-demo-back-role'
     ,url: './json/useradmin/role.js' //模拟接口
     ,cols: [[
       {type: 'checkbox', fixed: 'left'}
@@ -149,7 +149,7 @@ layui.define(['table', 'form'], function(exports){
   });
   
   //监听工具条
-  table.on('tool(LAY-user-back-role)', function(obj){
+  table.on('tool(LAY-demo-back-role)', function(obj){
     var data = obj.data;
     if(obj.event === 'del'){
       layer.confirm('确定删除此角色？', function(index){
@@ -160,18 +160,18 @@ layui.define(['table', 'form'], function(exports){
       admin.popup({
         title: '添加新角色'
         ,area: ['500px', '480px']
-        ,id: 'LAY-popup-user-add'
+        ,id: 'LAY-popup-demo-add'
         ,success: function(layero, index){
-          view(this.id).render('user/administrators/roleform', data).done(function(){
+          view(this.id).render('demo/administrators/roleform', data).done(function(){
             form.render(null, 'layuiadmin-form-role');
             
             //监听提交
-            form.on('submit(LAY-user-role-submit)', function(data){
+            form.on('submit(LAY-demo-role-submit)', function(data){
               var field = data.field; //获取提交的字段
 
               //提交 Ajax 成功后，关闭当前弹层并重载表格
               //$.ajax({});
-              layui.table.reload('LAY-user-back-role'); //重载表格
+              layui.table.reload('LAY-demo-back-role'); //重载表格
               layer.close(index); //执行关闭 
             });
           });
