@@ -10,10 +10,7 @@ import java.math.BigDecimal;
 
 @Table(name = "target_fraction")
 public class TargetFraction extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "award_year")
     private Integer awardYear;
@@ -72,19 +69,7 @@ public class TargetFraction extends BasePO<Integer> {
     @Column(name = "submit")
     private Byte submit;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return award_year

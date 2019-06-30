@@ -9,43 +9,28 @@ import javax.persistence.Table;
 
 @Table(name = "sys_role_menu")
 public class SysRoleMenu extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     /**
      * 角色ID
      */
     @Column(name = "role_id")
-    private String roleId;
+    private Integer roleId;
 
     /**
      * 菜单ID
      */
     @Column(name = "menu_id")
-    private String menuId;
+    private Integer menuId;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取角色ID
      *
      * @return role_id - 角色ID
      */
-    public String getRoleId() {
+    public Integer getRoleId() {
         return roleId;
     }
 
@@ -54,7 +39,7 @@ public class SysRoleMenu extends BasePO<Integer> {
      *
      * @param roleId 角色ID
      */
-    public void setRoleId(String roleId) {
+    public void setRoleId(Integer roleId) {
         this.roleId = roleId;
     }
 
@@ -63,7 +48,7 @@ public class SysRoleMenu extends BasePO<Integer> {
      *
      * @return menu_id - 菜单ID
      */
-    public String getMenuId() {
+    public Integer getMenuId() {
         return menuId;
     }
 
@@ -72,7 +57,7 @@ public class SysRoleMenu extends BasePO<Integer> {
      *
      * @param menuId 菜单ID
      */
-    public void setMenuId(String menuId) {
+    public void setMenuId(Integer menuId) {
         this.menuId = menuId;
     }
 }

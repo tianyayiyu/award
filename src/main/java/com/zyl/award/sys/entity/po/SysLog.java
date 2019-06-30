@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "sys_log")
 public class SysLog extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     /**
      * 用户id
@@ -56,19 +53,7 @@ public class SysLog extends BasePO<Integer> {
     @Column(name = "params")
     private String params;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户id

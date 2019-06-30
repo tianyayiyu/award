@@ -31,7 +31,9 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         String url = "/**";
         registry.addInterceptor(responseResultInterceptor).addPathPatterns(url);
-        registry.addInterceptor(authenticationInterceptor).addPathPatterns(url).excludePathPatterns(projectConfig.getAnonymousApi());
+        if(!projectConfig.isDebug()) {
+            registry.addInterceptor(authenticationInterceptor).addPathPatterns(url).excludePathPatterns(projectConfig.getAnonymousApi());
+        }
     }
 
     @Bean

@@ -10,10 +10,7 @@ import java.util.Date;
 
 @Table(name = "award_meeting")
 public class AwardMeeting extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "meeting_name")
     private String meetingName;
@@ -147,19 +144,7 @@ public class AwardMeeting extends BasePO<Integer> {
     @Column(name = "meeting_status_name")
     private String meetingStatusName;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return meeting_name

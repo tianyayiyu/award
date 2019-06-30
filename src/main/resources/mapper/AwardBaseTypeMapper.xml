@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zyl.award.mapper.AwardBaseTypeMapper">
-  <resultMap id="BaseResultMap" type="com.zyl.award.model.AwardBaseType">
+<mapper namespace="com.zyl.award.business.mapper.AwardBaseTypeMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.business.entity.po.AwardBaseType">
     <!--
       WARNING - @mbg.generated
     -->

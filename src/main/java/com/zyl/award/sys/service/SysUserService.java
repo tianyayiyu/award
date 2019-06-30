@@ -25,4 +25,6 @@ public interface SysUserService extends BaseCrudService<SysUser,Integer> {
      * @return
      */
     SysUserVo register(SysUser sysUser);
+
+
 }

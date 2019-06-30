@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "sys_role")
 public class SysRole extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "role_name")
     private String roleName;
@@ -20,19 +17,7 @@ public class SysRole extends BasePO<Integer> {
     @Column(name = "role_sign")
     private String roleSign;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return role_name

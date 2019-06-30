@@ -77,7 +77,6 @@ layui.use(['admin', 'form'], function(){
       ,dataType: 'json',
       contentType: 'application/json'
       ,done: function(res){
-        debugger;
         //请求成功后，写入 access_token
         layui.data(setter.tableName, {
           key: setter.request.tokenName
@@ -92,9 +91,6 @@ layui.use(['admin', 'form'], function(){
         }, function(){
           location.hash = search.redirect ? decodeURIComponent(search.redirect) : '/';
         });
-      }
-      ,error: function (res) {
-        debugger;
       }
     });
     

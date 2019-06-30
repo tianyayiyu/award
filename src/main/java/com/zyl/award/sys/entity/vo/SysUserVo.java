@@ -24,6 +24,10 @@ public class SysUserVo extends BaseVO {
 
     private String token;
 
+    private Integer roleId;
+
+    private String roleName;
+
 
 
 }

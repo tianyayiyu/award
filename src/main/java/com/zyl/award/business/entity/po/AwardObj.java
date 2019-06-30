@@ -10,10 +10,7 @@ import java.math.BigDecimal;
 
 @Table(name = "award_obj")
 public class AwardObj extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "meeting_id")
     private Integer meetingId;
@@ -87,19 +84,7 @@ public class AwardObj extends BasePO<Integer> {
     @Column(name = "round_index")
     private Short roundIndex;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return meeting_id

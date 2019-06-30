@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "base_project")
 public class BaseProject extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "project_name")
     private String projectName;
@@ -137,19 +134,7 @@ public class BaseProject extends BasePO<Integer> {
     @Column(name = "project_info")
     private String projectInfo;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return project_name

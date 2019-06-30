@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "sys_file")
 public class SysFile extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     /**
      * 信息ID
@@ -86,19 +83,7 @@ public class SysFile extends BasePO<Integer> {
     @Column(name = "p_cover")
     private Integer pCover;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取信息ID

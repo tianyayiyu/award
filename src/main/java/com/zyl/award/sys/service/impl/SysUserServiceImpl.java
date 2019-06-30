@@ -4,10 +4,13 @@ import com.zyl.award.commons.service.impl.BaseMySqlBaseCrudServiceImpl;
 import com.zyl.award.enums.ResultCode;
 import com.zyl.award.exception.BusinessException;
 import com.zyl.award.sys.entity.dto.LoginDto;
+import com.zyl.award.sys.entity.po.SysRole;
+import com.zyl.award.sys.entity.po.SysRoleMenu;
 import com.zyl.award.sys.entity.po.SysUser;
+import com.zyl.award.sys.entity.po.SysUserRole;
 import com.zyl.award.sys.entity.vo.SysUserVo;
 import com.zyl.award.sys.mapper.SysUserMapper;
-import com.zyl.award.sys.service.SysUserService;
+import com.zyl.award.sys.service.*;
 import com.zyl.award.utils.JwtUtil;
 import com.zyl.award.utils.RegexUtils;
 import org.springframework.beans.BeanUtils;
@@ -27,8 +30,20 @@ import java.util.List;
 @Service
 public class SysUserServiceImpl extends BaseMySqlBaseCrudServiceImpl<SysUser,Integer> implements SysUserService {
 
+    private static final Integer DEFAULT_ROLE_ID = 1;
+
     @Autowired
     SysUserMapper sysUserMapper;
+
+    @Autowired
+    SysUserRoleService sysUserRoleService;
+
+    @Autowired
+    SysRoleMenuService sysRoleMenuService;
+
+    @Autowired
+    SysRoleService sysRoleService;
+
 
     @Override
     public SysUserVo login(LoginDto loginDto) {
@@ -69,6 +84,13 @@ public class SysUserServiceImpl extends BaseMySqlBaseCrudServiceImpl<SysUser,Int
         BeanUtils.copyProperties(sysUser,sysUserVo);
         String token = JwtUtil.createToken(userId);
         sysUserVo.setToken(token);
+        //添加权限进入用户权限表
+        SysUserRole sysUserRole = new SysUserRole();
+        sysUserRole.setUserId(userId);
+        sysUserRole.setRoleId(DEFAULT_ROLE_ID);
+        sysUserRoleService.insert(sysUserRole);
         return sysUserVo;
     }
+
+
 }

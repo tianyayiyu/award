@@ -9,43 +9,28 @@ import javax.persistence.Table;
 
 @Table(name = "sys_user_role")
 public class SysUserRole extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     /**
      * 用户ID
      */
     @Column(name = "user_id")
-    private String userId;
+    private Integer userId;
 
     /**
      * 角色ID
      */
     @Column(name = "role_id")
-    private String roleId;
+    private Integer roleId;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户ID
      *
      * @return user_id - 用户ID
      */
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
@@ -54,7 +39,7 @@ public class SysUserRole extends BasePO<Integer> {
      *
      * @param userId 用户ID
      */
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -63,7 +48,7 @@ public class SysUserRole extends BasePO<Integer> {
      *
      * @return role_id - 角色ID
      */
-    public String getRoleId() {
+    public Integer getRoleId() {
         return roleId;
     }
 
@@ -72,7 +57,7 @@ public class SysUserRole extends BasePO<Integer> {
      *
      * @param roleId 角色ID
      */
-    public void setRoleId(String roleId) {
+    public void setRoleId(Integer roleId) {
         this.roleId = roleId;
     }
 }

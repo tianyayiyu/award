@@ -9,13 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "base_person")
 public class BasePerson extends BasePO<Integer> {
-    /**
-     * 人员主键
-     */
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     /**
      * 人员姓名
@@ -278,23 +272,8 @@ public class BasePerson extends BasePO<Integer> {
     @Column(name = "k_remarks")
     private String kRemarks;
 
-    /**
-     * 获取人员主键
-     *
-     * @return id - 人员主键
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * 设置人员主键
-     *
-     * @param id 人员主键
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
+
 
     /**
      * 获取人员姓名

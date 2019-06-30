@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "award_base_target")
 public class AwardBaseTarget extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "target_name")
     private String targetName;
@@ -53,19 +50,7 @@ public class AwardBaseTarget extends BasePO<Integer> {
     @Column(name = "state")
     private Integer state;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return target_name

@@ -1,6 +1,7 @@
 package com.zyl.award.sys.entity.po;
 
 import com.zyl.award.commons.model.po.BasePO;
+import com.zyl.award.commons.model.po.BaseSortTreePO;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -8,11 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name = "sys_menu")
-public class SysMenu extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+public class SysMenu extends BaseSortTreePO<Integer> {
 
     /**
      * 与存放视图文件夹对应
@@ -38,11 +35,6 @@ public class SysMenu extends BasePO<Integer> {
     @Column(name = "jump")
     private String jump;
 
-    @Column(name = "sort")
-    private Integer sort;
-
-    @Column(name = "parent_id")
-    private Integer parentId;
 
     /**
      * 位于第几级
@@ -50,19 +42,7 @@ public class SysMenu extends BasePO<Integer> {
     @Column(name = "level")
     private Short level;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取与存放视图文件夹对应
@@ -134,34 +114,6 @@ public class SysMenu extends BasePO<Integer> {
      */
     public void setJump(String jump) {
         this.jump = jump;
-    }
-
-    /**
-     * @return sort
-     */
-    public Integer getSort() {
-        return sort;
-    }
-
-    /**
-     * @param sort
-     */
-    public void setSort(Integer sort) {
-        this.sort = sort;
-    }
-
-    /**
-     * @return parent_id
-     */
-    public Integer getParentId() {
-        return parentId;
-    }
-
-    /**
-     * @param parentId
-     */
-    public void setParentId(Integer parentId) {
-        this.parentId = parentId;
     }
 
     /**

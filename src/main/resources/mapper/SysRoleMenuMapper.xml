@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zyl.award.mapper.SysRoleMenuMapper">
-  <resultMap id="BaseResultMap" type="com.zyl.award.model.SysRoleMenu">
-    <!--
-      WARNING - @mbg.generated
-    -->
+<mapper namespace="com.zyl.award.sys.mapper.SysRoleMenuMapper">
+  <resultMap id="BaseResultMap" type="com.zyl.award.sys.entity.po.SysRoleMenu">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="role_id" jdbcType="VARCHAR" property="roleId" />
-    <result column="menu_id" jdbcType="VARCHAR" property="menuId" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="menu_id" jdbcType="INTEGER" property="menuId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
+
+  <select id="getFirstMenuByRoleId" resultType="com.zyl.award.sys.entity.vo.SysRoleMenuVo"
+  parameterType="java.lang.Integer">
+    select srm.role_id as roleId,srm.menu_id as menuId,sm.icon as icon,sm.jump as jump,sm.name as name,sm.parent_id as parentId,
+    sm.title as title,sm.sort as sort
+    from sys_role_menu srm
+    LEFT JOIN sys_menu sm on srm.menu_id = sm.id where srm.role_id = #{roleId,jdbcType=INTEGER} and sm.parent_id=0 order by sm.sort asc
+  </select>
 </mapper>

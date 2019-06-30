@@ -10,10 +10,7 @@ import java.util.Date;
 
 @Table(name = "login_record")
 public class LoginRecord extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "user_id")
     private Integer userId;
@@ -30,19 +27,7 @@ public class LoginRecord extends BasePO<Integer> {
     @Column(name = "user_agent")
     private String userAgent;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return user_id

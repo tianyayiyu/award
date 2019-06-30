@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "award_expert")
 public class AwardExpert extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "meeting_id")
     private Integer meetingId;
@@ -44,19 +41,7 @@ public class AwardExpert extends BasePO<Integer> {
     @Column(name = "order")
     private Short order;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return meeting_id

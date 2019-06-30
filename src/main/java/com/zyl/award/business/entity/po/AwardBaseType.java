@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "award_base_type")
 public class AwardBaseType extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "award_name")
     private String awardName;
@@ -32,19 +29,6 @@ public class AwardBaseType extends BasePO<Integer> {
     @Column(name = "pass_percentage")
     private Double passPercentage;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return award_name

@@ -9,10 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "sys_dict")
 public class SysDict extends BasePO<Integer> {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "JDBC")
-    private Integer id;
+
 
     @Column(name = "dict_key")
     private String dictKey;
@@ -26,19 +23,6 @@ public class SysDict extends BasePO<Integer> {
     @Column(name = "sort")
     private Integer sort;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return dict_key
